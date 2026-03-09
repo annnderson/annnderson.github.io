@@ -3908,14 +3908,13 @@ input, select, textarea {
 			}
 
 		}
-				.highlights{
-		    list-style: none;
-		    padding: 0;
-		    margin-top: 20px;
+				.highlights {
+		    list-style: disc;
+		    padding-left: 20px;
 		}
 		
-		.highlights li{
-		    display: inline-block;
-		    margin-right: 20px;
-		    font-weight: 500;
+				.highlights li {
+			 display: list-item;
+			 margin-bottom: 5px;
 		}
+
