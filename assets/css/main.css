@@ -3909,12 +3909,15 @@ input, select, textarea {
 
 		}
 				.highlights {
-		    list-style: disc;
-		    padding-left: 20px;
-		}
-		
-				.highlights li {
-			 display: list-item;
-			 margin-bottom: 5px;
-		}
+	    list-style: disc;
+	    margin-top: 20px;
+	    padding-left: 20px;
+	}
+	
+	.highlights li {
+	    display: list-item;
+	    margin-bottom: 8px;
+	    font-size: 1.1rem;
+	}
+
 
