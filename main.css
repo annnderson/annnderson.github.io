@@ -3012,78 +3012,69 @@ input, select, textarea {
 /* Spotlights */
 
 .spotlights > section {
-	display: -moz-flex;
-	display: -webkit-flex;
-	display: -ms-flex;
 	display: flex;
 	flex-direction: row;
 	align-items: stretch;
-	min-height: 22.5em;
+	min-height: 320px;
 }
 
 body.is-ie .spotlights > section {
 	min-height: 0;
 }
 
-/* área da imagem */
+/* IMAGEM */
 
 .spotlights > section > .image {
 	background-position: center;
 	background-size: cover;
-	border-radius: 0;
-	display: block;
 	position: relative;
-	width: 45%;
+	display: block;
+	width: 40%;
 	min-height: 320px;
 }
 
 .spotlights > section > .image img {
-	border-radius: 0;
-	display: block;
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
+	display: none;
 }
 
-/* overlay da imagem */
+/* overlay */
 
 .spotlights > section > .image:before {
 	transition: opacity 1s ease;
 	background: rgba(49, 36, 80, 0.9);
 	content: '';
-	display: block;
-	height: 100%;
-	left: 0;
-	opacity: 0;
 	position: absolute;
 	top: 0;
+	left: 0;
 	width: 100%;
+	height: 100%;
+	opacity: 0;
 }
 
-/* área de conteúdo */
+/* CONTEÚDO */
 
 .spotlights > section > .content {
-	padding: 4em 5em 2em 5em;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	width: 55%;
+	padding: 4em 5em 2em 5em;
+	width: 60%;
 }
 
 .spotlights > section > .content > .inner {
-	transform: translateX(0) translateY(0);
 	transition: opacity 1s ease, transform 1s ease;
+	transform: translateX(0);
 	opacity: 1;
 }
 
-/* variação de cor */
+/* cores alternadas */
 
 .spotlights > section:nth-child(2) {
-	background-color: rgba(0, 0, 0, 0.05);
+	background-color: rgba(0,0,0,0.05);
 }
 
 .spotlights > section:nth-child(3) {
-	background-color: rgba(0, 0, 0, 0.1);
+	background-color: rgba(0,0,0,0.1);
 }
 
 /* animação */
@@ -3099,15 +3090,7 @@ body.is-preload .spotlights > section > .content > .inner {
 	opacity: 0;
 }
 
-/* telas menores */
-
-@media screen and (max-width: 1680px) {
-
-	.spotlights > section > .content {
-		padding: 4em 4em 2em 4em;
-	}
-
-}
+/* RESPONSIVO */
 
 @media screen and (max-width: 980px) {
 
@@ -3117,65 +3100,23 @@ body.is-preload .spotlights > section > .content > .inner {
 
 	.spotlights > section > .image {
 		width: 100%;
-		height: 300px;
+		height: 280px;
 	}
 
 	.spotlights > section > .content {
 		width: 100%;
-	}
-
-	.spotlights > section.inactive > .content > .inner,
-	body.is-preload .spotlights > section > .content > .inner {
-		transform: translateY(1em);
+		padding: 3em 2em;
 	}
 
 }
 
-		@media screen and (max-width: 1680px) {
+@media screen and (max-width: 736px) {
 
-			.spotlights > section > .content {
-				padding: 4em 4em 2em 4em ;
-			}
+	.spotlights > section > .image {
+		height: 220px;
+	}
 
-		}
-
-		@media screen and (max-width: 980px) {
-
-			.spotlights > section {
-				display: block;
-			}
-
-				.spotlights > section > .image {
-					width: 100%;
-					height: 50vh;
-				}
-
-				.spotlights > section > .content {
-					width: 100%;
-				}
-
-				.spotlights > section.inactive > .content > .inner,
-				body.is-preload .spotlights > section > .content > .inner {
-					-moz-transform: translateY(1em);
-					-webkit-transform: translateY(1em);
-					-ms-transform: translateY(1em);
-					transform: translateY(1em);
-				}
-
-		}
-
-		@media screen and (max-width: 736px) {
-
-			.spotlights > section > .image {
-				height: 50vh;
-				min-height: 15em;
-			}
-
-			.spotlights > section > .content {
-				padding: 3em 2em 1em 2em ;
-			}
-
-		}
+}
 
 /* Table */
 
@@ -3953,6 +3894,7 @@ body.is-preload .spotlights > section > .content > .inner {
 			}
 
 		}
+
 
 
 
