@@ -3025,10 +3025,10 @@ body.is-ie .spotlights > section {
 /* IMAGEM */
 
 .spotlights > section > .image {
-	background-position: center;
+	background-position: center center;
 	background-size: cover;
-	position: relative;
 	display: block;
+	position: relative;
 	width: 40%;
 	min-height: 320px;
 }
@@ -3037,47 +3037,46 @@ body.is-ie .spotlights > section {
 	display: none;
 }
 
-/* overlay */
-
 .spotlights > section > .image:before {
 	transition: opacity 1s ease;
 	background: rgba(49, 36, 80, 0.9);
 	content: '';
+	display: block;
+	height: 100%;
+	left: 0;
+	opacity: 0;
 	position: absolute;
 	top: 0;
-	left: 0;
 	width: 100%;
-	height: 100%;
-	opacity: 0;
 }
 
 /* CONTEÚDO */
 
 .spotlights > section > .content {
+	padding: 4em 5em 2em 5em;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	padding: 4em 5em 2em 5em;
-	width: 60%;
+	flex: 1;
 }
 
 .spotlights > section > .content > .inner {
-	transition: opacity 1s ease, transform 1s ease;
 	transform: translateX(0);
+	transition: opacity 1s ease, transform 1s ease;
 	opacity: 1;
 }
 
-/* cores alternadas */
+/* CORES ALTERNADAS */
 
 .spotlights > section:nth-child(2) {
-	background-color: rgba(0,0,0,0.05);
+	background-color: rgba(0, 0, 0, 0.05);
 }
 
 .spotlights > section:nth-child(3) {
-	background-color: rgba(0,0,0,0.1);
+	background-color: rgba(0, 0, 0, 0.1);
 }
 
-/* animação */
+/* ANIMAÇÃO */
 
 .spotlights > section.inactive > .image:before,
 body.is-preload .spotlights > section > .image:before {
@@ -3092,6 +3091,14 @@ body.is-preload .spotlights > section > .content > .inner {
 
 /* RESPONSIVO */
 
+@media screen and (max-width: 1680px) {
+
+	.spotlights > section > .content {
+		padding: 4em 4em 2em 4em;
+	}
+
+}
+
 @media screen and (max-width: 980px) {
 
 	.spotlights > section {
@@ -3100,12 +3107,16 @@ body.is-preload .spotlights > section > .content > .inner {
 
 	.spotlights > section > .image {
 		width: 100%;
-		height: 280px;
+		height: 300px;
 	}
 
 	.spotlights > section > .content {
 		width: 100%;
-		padding: 3em 2em;
+	}
+
+	.spotlights > section.inactive > .content > .inner,
+	body.is-preload .spotlights > section > .content > .inner {
+		transform: translateY(1em);
 	}
 
 }
@@ -3114,6 +3125,11 @@ body.is-preload .spotlights > section > .content > .inner {
 
 	.spotlights > section > .image {
 		height: 220px;
+		min-height: 15em;
+	}
+
+	.spotlights > section > .content {
+		padding: 3em 2em 1em 2em;
 	}
 
 }
@@ -3894,6 +3910,7 @@ body.is-preload .spotlights > section > .content > .inner {
 			}
 
 		}
+
 
 
 
