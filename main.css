@@ -2562,76 +2562,81 @@ input, select, textarea {
 
 /* Image */
 
-	.image {
-		border-radius: 0.25em;
-		border: 0;
-		display: inline-block;
-		position: relative;
-	}
+.image {
+	border-radius: 0.25em;
+	border: 0;
+	display: block;
+	position: relative;
+	overflow: hidden;
+}
 
-		.image img {
-			border-radius: 0.25em;
-			display: block;
-		}
+/* imagem padrão */
 
-		.image.left, .image.right {
-			max-width: 40%;
-		}
+.image img {
+	border-radius: 0.25em;
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
 
-			.image.left img, .image.right img {
-				width: 100%;
-			}
+/* imagens alinhadas */
 
-		.image.left {
-			float: left;
-			margin: 0 1.5em 1em 0;
-			top: 0.25em;
-		}
+.image.left,
+.image.right {
+	max-width: 40%;
+}
 
-		.image.right {
-			float: right;
-			margin: 0 0 1em 1.5em;
-			top: 0.25em;
-		}
+.image.left img,
+.image.right img {
+	width: 100%;
+	height: auto;
+	object-fit: contain;
+}
 
-		.image.fit {
-			display: block;
-			margin: 0 0 2em 0;
-			width: 100%;
-		}
+.image.left {
+	float: left;
+	margin: 0 1.5em 1em 0;
+	top: 0.25em;
+}
 
-			.image.fit img {
-				width: 100%;
-			}
+.image.right {
+	float: right;
+	margin: 0 0 1em 1.5em;
+	top: 0.25em;
+}
 
-		.image.main {
-			display: block;
-			margin: 0 0 3em 0;
-			width: 100%;
-		}
+/* imagens que ocupam todo o card */
 
-			.image.main img {
-				width: 100%;
-			}
-		.image.fit {
-    		aspect-ratio: 16 / 9;
-    		overflow: hidden;
-		}
+.image.fit {
+	display: block;
+	margin: 0 0 2em 0;
+	width: 100%;
+	aspect-ratio: 16 / 9;
+	overflow: hidden;
+}
 
-		.image.fit img {
-    		width: 100%;
-    		height: 100%;
-    		object-fit: cover;
-		}
-		.image.fit {
-    		aspect-ratio: 16 / 9;
-		}
+.image.fit img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
 
-		.image.fit img {
-   		 	width: 100%;
-   		 	height: 100%;
-   		 	object-fit: cover;
-		}
+/* imagem principal */
+
+.image.main {
+	display: block;
+	margin: 0 0 3em 0;
+	width: 100%;
+	aspect-ratio: 16 / 9;
+}
+
+.image.main img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+		
 /* List */
 
 	ol {
@@ -3926,4 +3931,5 @@ input, select, textarea {
 			}
 
 		}
+
 
