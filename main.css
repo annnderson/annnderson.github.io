@@ -4,6 +4,7 @@
 	Hyperspace by HTML5 UP
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+
 */
 
 html, body, div, span, applet, object,
@@ -2612,7 +2613,16 @@ input, select, textarea {
 			.image.main img {
 				width: 100%;
 			}
+		.image.fit {
+    		aspect-ratio: 16 / 9;
+    		overflow: hidden;
+		}
 
+		.image.fit img {
+    		width: 100%;
+    		height: 100%;
+    		object-fit: cover;
+		}
 /* List */
 
 	ol {
