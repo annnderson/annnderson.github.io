@@ -2623,6 +2623,15 @@ input, select, textarea {
     		height: 100%;
     		object-fit: cover;
 		}
+		.image.fit {
+    		aspect-ratio: 16 / 9;
+		}
+
+		.image.fit img {
+   		 	width: 100%;
+   		 	height: 100%;
+   		 	object-fit: cover;
+		}
 /* List */
 
 	ol {
@@ -3917,3 +3926,4 @@ input, select, textarea {
 			}
 
 		}
+
